@@ -1,0 +1,17 @@
+<svg width="480" height="900" viewBox="0 0 480 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#2374F2" fill-opacity=".2"/>
+    </pattern>
+    <linearGradient id="line" x1="430" y1="88" x2="303" y2="815" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2374F2" stop-opacity=".1"/>
+      <stop offset=".45" stop-color="#2374F2" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#16B364" stop-opacity=".22"/>
+    </linearGradient>
+  </defs>
+  <path d="M461 54C367 170 457 271 375 386C296 497 393 628 299 845" stroke="url(#line)" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <rect x="354" y="16" width="126" height="180" fill="url(#dots)"/>
+  <rect x="0" y="728" width="116" height="172" fill="url(#dots)" opacity=".55"/>
+  <circle cx="400" cy="252" r="5" fill="#2374F2" fill-opacity=".58"/>
+  <circle cx="341" cy="578" r="5" fill="#16B364" fill-opacity=".56"/>
+</svg>

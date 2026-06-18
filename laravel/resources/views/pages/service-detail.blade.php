@@ -138,8 +138,8 @@ $currentFacts = $factsMap[$page->slug] ?? [
                 <img src="{{ asset('assets/laser_surgery_illustration.png') }}" alt="{{ $page->title }} surgical illustration" class="vc-reveal-image" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             
-            <div style="position: absolute; bottom: -1rem; background: #fff; border: 1px solid var(--color-border); padding: 0.5rem 1rem; border-radius: var(--radius-round); font-size: var(--text-caption); font-weight: 700; color: var(--green-800); border-color: var(--green-300); z-index: 3; display: flex; align-items: center; gap: 0.25rem; box-shadow: var(--shadow-sm);">
-                <span>🛡️</span> Day Care Procedure
+            <div style="position: absolute; bottom: -1rem; background: #fff; border: 1px solid var(--color-border); padding: 0.5rem 1rem; border-radius: var(--radius-round); font-size: var(--text-caption); font-weight: 700; color: var(--green-800); border-color: var(--green-300); z-index: 3; display: flex; align-items: center; gap: 0.35rem; box-shadow: var(--shadow-sm);">
+                <img src="{{ asset('assets/icons/icon-shield.svg') }}" style="width: 1.15rem; height: 1.15rem; object-fit: contain;" alt="Shield Icon"> Day Care Procedure
             </div>
         </div>
     </div>
@@ -150,7 +150,6 @@ $currentFacts = $factsMap[$page->slug] ?? [
     <div class="vc-container">
         <div class="vc-grid" style="grid-template-columns: 0.95fr 1.05fr; gap: var(--space-12); align-items: center;">
             <div class="vc-stack" style="gap: var(--space-4);">
-                <span class="vc-eyebrow">What is it?</span>
                 <h3 style="font-family: var(--font-display); font-size: var(--text-h2); font-weight: 800; color: var(--color-text); margin:0;">What is {{ $page->title }}?</h3>
                 <p style="color: var(--color-text-muted); font-size: var(--text-body-md); line-height: 1.6;">
                     Learn about clinical markers, parameters, and modern daycare surgical methods. Laparoscopy and laser surgeries bypass large cuts, ensuring safe outcomes and lower recurrence rates.
@@ -243,7 +242,6 @@ $currentFacts = $factsMap[$page->slug] ?? [
 <section class="vc-section vc-scroll-reveal" id="booking-block" style="padding-block: var(--space-16);">
     <div class="vc-container">
         <div style="max-width: 45rem; margin-inline: auto; text-align: center;" class="vc-stack">
-            <span class="vc-eyebrow">Consultation</span>
             <h2 class="vc-title">Book a Specialised Assessment</h2>
             <p class="vc-lede">Get a clinical consultation, diagnostics referral, or a trusted surgical second opinion.</p>
             
@@ -258,7 +256,7 @@ $currentFacts = $factsMap[$page->slug] ?? [
                     </label>
                     <label class="vc-field">
                         <span class="vc-label">Phone Number <span style="color: var(--red-700);">*</span></span>
-                        <input class="vc-input" name="phone" placeholder="+91-xxxxx-xxxxx" required value="{{ old('phone') }}">
+                        <input class="vc-input" name="phone" placeholder="e.g. +91 74474 41426" required value="{{ old('phone') }}">
                     </label>
                 </div>
                 

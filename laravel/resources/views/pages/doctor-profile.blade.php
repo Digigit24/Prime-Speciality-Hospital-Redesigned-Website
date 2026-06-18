@@ -87,8 +87,8 @@
                 <a class="vc-btn vc-btn--primary vc-btn--lg" href="https://wa.me/919422668921" target="_blank">
                     Connect on WhatsApp
                 </a>
-                <a class="vc-btn vc-btn--outline vc-btn--lg" href="tel:9422668921">
-                    Call: +91 9422668921
+                <a class="vc-btn vc-btn--outline vc-btn--lg" href="tel:+919422668921">
+                    Call: +91 94226 68921
                 </a>
             </div>
         </div>
@@ -99,7 +99,6 @@
 <section class="vc-section vc-scroll-reveal" style="background: var(--color-surface); border-top: 1px solid var(--color-border);">
     <div class="vc-container" style="max-width: 45rem; margin-inline: auto; text-align: center;">
         <div class="vc-stack" style="gap: var(--space-4);">
-            <span class="vc-eyebrow">Consultation</span>
             <h2 class="vc-title">Schedule a Consultation with Dr. Pankaj Bhalerao</h2>
             <p class="vc-lede">Request an appointment at our Moshi clinic or ask a surgical question.</p>
             
@@ -114,7 +113,7 @@
                     </label>
                     <label class="vc-field">
                         <span class="vc-label">Phone Number <span style="color: var(--red-700);">*</span></span>
-                        <input class="vc-input" name="phone" placeholder="+91-xxxxx-xxxxx" required value="{{ old('phone') }}">
+                        <input class="vc-input" name="phone" placeholder="e.g. +91 74474 41426" required value="{{ old('phone') }}">
                     </label>
                 </div>
                 

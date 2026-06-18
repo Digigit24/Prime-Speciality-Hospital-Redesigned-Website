@@ -119,7 +119,6 @@
 
         <!-- Right Column: Hospital Details -->
         <div class="vc-stack vc-reveal-right" style="gap: var(--space-6);">
-            <span class="vc-eyebrow">Medical Centre Moshi</span>
             <h2 class="vc-title">State-of-the-Art Surgical Setup</h2>
             <p style="color: var(--color-text-muted); font-size: var(--text-body-md); line-height: 1.65; margin: 0;">
                 Prime Speciality Hospital is the leading centre for advanced surgical treatments in Moshi, Bhosari, and Pimpri Chinchwad. Our facility is designed to support patient diagnostic scans and surgical operations under one roof, featuring a modern modular Operation Theatre, ICU setups, private recovery wards, in-house pathology, and a round-the-clock pharmacy.
@@ -133,24 +132,24 @@
     <!-- Highlights Cards Grid -->
     <div class="vc-container" style="margin-top: var(--space-12);">
         <div class="vc-grid" style="grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
-            <div class="vc-card vc-fade-in-scale" style="background:#fff;">
-                <span class="vc-icon vc-icon--care">✓</span>
-                <h3 style="margin-top: 1rem; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Extensive Care</h3>
+            <div class="vc-card vc-fade-in-scale" style="background:#fff; display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6);">
+                <img src="{{ asset('assets/icons/icon-hospital.svg') }}" style="width: 3.5rem; height: 3.5rem; object-fit: contain;" alt="Extensive Care">
+                <h3 style="margin: 0; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Extensive Care</h3>
                 <p style="font-size: var(--text-body-sm); margin: 0;">Immediate diagnostic scans and treatment plans under one roof.</p>
             </div>
-            <div class="vc-card vc-fade-in-scale" style="background:#fff;">
-                <span class="vc-icon">✓</span>
-                <h3 style="margin-top: 1rem; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Newest Tech</h3>
+            <div class="vc-card vc-fade-in-scale" style="background:#fff; display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6);">
+                <img src="{{ asset('assets/icons/icon-laparoscopy.svg') }}" style="width: 3.5rem; height: 3.5rem; object-fit: contain;" alt="Newest Tech">
+                <h3 style="margin: 0; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Newest Tech</h3>
                 <p style="font-size: var(--text-body-sm); margin: 0;">Advanced laparoscopy towers and laser surgical setups.</p>
             </div>
-            <div class="vc-card vc-fade-in-scale" style="background:#fff;">
-                <span class="vc-icon vc-icon--care">✓</span>
-                <h3 style="margin-top: 1rem; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Prevention First</h3>
+            <div class="vc-card vc-fade-in-scale" style="background:#fff; display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6);">
+                <img src="{{ asset('assets/icons/icon-shield.svg') }}" style="width: 3.5rem; height: 3.5rem; object-fit: contain;" alt="Prevention First">
+                <h3 style="margin: 0; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Prevention First</h3>
                 <p style="font-size: var(--text-body-sm); margin: 0;">Emphasis on patient guides, diet advice, and post-op care.</p>
             </div>
-            <div class="vc-card vc-fade-in-scale" style="background:#fff;">
-                <span class="vc-icon">✓</span>
-                <h3 style="margin-top: 1rem; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Multidisciplinary</h3>
+            <div class="vc-card vc-fade-in-scale" style="background:#fff; display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6);">
+                <img src="{{ asset('assets/icons/icon-doctor.svg') }}" style="width: 3.5rem; height: 3.5rem; object-fit: contain;" alt="Multidisciplinary">
+                <h3 style="margin: 0; font-size: var(--text-body-lg); font-weight: 700; font-family: var(--font-display);">Multidisciplinary</h3>
                 <p style="font-size: var(--text-body-sm); margin: 0;">Surgical ward, pharmacy, diagnostics working in unison.</p>
             </div>
         </div>
@@ -161,7 +160,6 @@
 <section class="vc-section vc-scroll-reveal" style="padding-block: var(--space-16);">
     <div class="vc-container">
         <div class="vc-stack" style="align-items: center; text-align: center; margin-bottom: var(--space-12);">
-            <span class="vc-eyebrow">Patient Stories</span>
             <h2 class="vc-title">Our Patients Say It Best</h2>
             <p class="vc-lede">Read real feedback from patients who underwent laparoscopic and laser procedures under Dr. Pankaj Bhalerao.</p>
         </div>
@@ -210,7 +208,6 @@
 <section class="vc-section vc-scroll-reveal" id="booking-section" style="background: var(--color-surface); border-top: 1px solid var(--color-border);">
     <div class="vc-container" style="max-width: 45rem; margin-inline: auto; text-align: center;">
         <div class="vc-stack" style="gap: var(--space-4);">
-            <span class="vc-eyebrow">Booking Desk</span>
             <h2 class="vc-title">Schedule a Consultation</h2>
             <p class="vc-lede">Submit your details below to schedule an appointment with Dr. Pankaj Bhalerao at our Moshi clinic.</p>
             

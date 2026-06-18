@@ -57,6 +57,10 @@
   --color-care: var(--green-600);
   --color-focus: var(--blue-400);
 
+  --color-glow-blue: rgba(59, 130, 246, 0.15);
+  --color-glow-green: rgba(16, 185, 129, 0.12);
+  --color-glow-cyan: rgba(6, 182, 212, 0.15);
+
   --font-display: "Manrope", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -100,12 +104,19 @@
   --radius-2xl: 2rem;
   --radius-round: 999px;
 
-  --shadow-xs: 0 1px 2px rgb(11 23 54 / 6%);
-  --shadow-sm: 0 4px 12px rgb(19 51 101 / 8%);
-  --shadow-md: 0 10px 28px rgb(19 51 101 / 10%);
-  --shadow-lg: 0 20px 50px rgb(19 51 101 / 13%);
-  --shadow-xl: 0 32px 80px rgb(19 51 101 / 16%);
+  --shadow-xs: 0 1px 2px rgb(19 51 101 / 4%);
+  --shadow-sm: 0 2px 8px rgb(19 51 101 / 6%);
+  --shadow-md: 0 6px 16px rgb(19 51 101 / 8%);
+  --shadow-lg: 0 12px 24px rgb(19 51 101 / 10%);
+  --shadow-xl: 0 20px 36px rgb(19 51 101 / 12%);
   --shadow-focus: 0 0 0 4px rgb(96 165 250 / 30%);
+
+  --z-dropdown: 1000;
+  --z-header: 1100;
+  --z-mega-menu: 1200;
+  --z-mobile-bar: 1300;
+  --z-modal: 1400;
+  --z-toast: 1500;
 
   --container: 90rem;
   --container-wide: 100rem;
@@ -137,8 +148,8 @@ img, svg { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    animation: none !important;
+    animation-timeline: none !important;
     transition-duration: 0.01ms !important;
   }
 }

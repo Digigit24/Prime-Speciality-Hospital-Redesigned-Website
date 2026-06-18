@@ -33,8 +33,8 @@
                 <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">
                     For emergency cases or immediate confirmations, please call the clinic desk directly:
                 </p>
-                <a href="tel:7447441426" class="vc-btn vc-btn--secondary" style="width: 100%;">
-                    Call: +91 7447441426
+                <a href="tel:+917447441426" class="vc-btn vc-btn--secondary" style="width: 100%;">
+                    Call: +91 74474 41426
                 </a>
             </div>
 
@@ -59,7 +59,7 @@
             <div class="vc-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
                 <label class="vc-field">
                     <span class="vc-label">Phone Number <span style="color: var(--red-700);">*</span></span>
-                    <input class="vc-input" name="phone" placeholder="+91-xxxxx-xxxxx" required value="{{ old('phone') }}">
+                    <input class="vc-input" name="phone" placeholder="e.g. +91 74474 41426" required value="{{ old('phone') }}">
                 </label>
                 <label class="vc-field">
                     <span class="vc-label">Email Address <span style="color: var(--red-700);">*</span></span>

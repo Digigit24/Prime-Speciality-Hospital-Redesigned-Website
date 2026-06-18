@@ -30,7 +30,12 @@
             
             <!-- Address Card -->
             <div class="vc-card" style="background: #fff; border-color: var(--color-border-strong); display: flex; gap: var(--space-4); align-items: start;">
-                <span class="vc-icon" style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; font-size: 1rem;">📍</span>
+                <div style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--blue-50); border-radius: 50%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--blue-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.15rem; height: 1.15rem;">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
                 <div>
                     <h3 style="margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: var(--text-h6); font-weight: 700;">Hospital Address</h3>
                     <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); line-height: 1.6; margin: 0;">
@@ -41,19 +46,28 @@
 
             <!-- Phone & Mail Card -->
             <div class="vc-card" style="background: #fff; border-color: var(--color-border-strong); display: flex; gap: var(--space-4); align-items: start;">
-                <span class="vc-icon vc-icon--care" style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; font-size: 1rem;">📞</span>
+                <div style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--green-50); border-radius: 50%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--green-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.15rem; height: 1.15rem;">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
                 <div>
                     <h3 style="margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: var(--text-h6); font-weight: 700;">Phone & Mail</h3>
                     <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); line-height: 1.6; margin: 0;">
-                        <strong>Mobile:</strong> <a href="tel:7447441426" style="text-decoration:none; color:inherit;">+91-7447441426</a> / <a href="tel:9422668921" style="text-decoration:none; color:inherit;">9422668921</a><br>
-                        <strong>Email:</strong> <a href="mailto:idrpankajnbhalerao@gmail.com" style="text-decoration:none; color:inherit;">idrpankajnbhalerao@gmail.com</a>
+                        <strong>Mobile:</strong> <a href="tel:+917447441426" style="text-decoration:none; color:inherit; font-weight:600;">+91 74474 41426</a> / <a href="tel:+919422668921" style="text-decoration:none; color:inherit; font-weight:600;">+91 94226 68921</a><br>
+                        <strong>Email:</strong> <a href="mailto:idrpankajnbhalerao@gmail.com" style="text-decoration:none; color:inherit; font-weight:600;">idrpankajnbhalerao@gmail.com</a>
                     </p>
                 </div>
             </div>
 
             <!-- Working Hours Card -->
             <div class="vc-card" style="background: #fff; border-color: var(--color-border-strong); display: flex; gap: var(--space-4); align-items: start;">
-                <span class="vc-icon" style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; font-size: 1rem; background: var(--blue-500)">⏰</span>
+                <div style="width: 2.5rem; height: 2.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--blue-50); border-radius: 50%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--blue-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.15rem; height: 1.15rem;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
                 <div>
                     <h3 style="margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: var(--text-h6); font-weight: 700;">Hours of Operation</h3>
                     <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); line-height: 1.6; margin: 0;">
@@ -80,7 +94,7 @@
                 <div class="vc-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
                     <label class="vc-field">
                         <span class="vc-label">Phone Number <span style="color: var(--red-700);">*</span></span>
-                        <input class="vc-input" name="phone" placeholder="+91-xxxxx-xxxxx" required value="{{ old('phone') }}">
+                        <input class="vc-input" name="phone" placeholder="e.g. +91 74474 41426" required value="{{ old('phone') }}">
                     </label>
                     <label class="vc-field">
                         <span class="vc-label">Email Address <span style="color: var(--red-700);">*</span></span>
@@ -132,9 +146,20 @@
         </div>
 
         <div style="width:100%; border: 1px solid var(--color-border-strong); border-radius: var(--radius-xl); overflow:hidden; box-shadow: var(--shadow-sm); height: 26rem; background:#fff;">
+            @php
+                $apiKey = config('services.google.api_key');
+                $placeId = config('services.google.place_id');
+                $embedUrl = ($apiKey && $placeId) 
+                    ? "https://www.google.com/maps/embed/v1/place?key={$apiKey}&q=place_id:{$placeId}"
+                    : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8078651874254!2d73.83404557579737!3d18.672522764952403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c75a40bbcc99%3A0xe2128e469c8f1eb3!2sPrime%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1705600000000!5m2!1sen!2sin";
+                
+                $mapsUrl = $placeId 
+                    ? "https://maps.google.com/?q=place_id:{$placeId}"
+                    : "https://maps.app.goo.gl/yP95pQ1J8uT2gT4c6";
+            @endphp
             <!-- Interactive iframe or static redirect -->
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8078651874254!2d73.83404557579737!3d18.672522764952403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c75a40bbcc99%3A0xe2128e469c8f1eb3!2sPrime%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1705600000000!5m2!1sen!2sin" 
+                src="{{ $embedUrl }}" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -144,7 +169,7 @@
             </iframe>
         </div>
         <div style="text-align: center; margin-top: var(--space-4);">
-            <a href="https://maps.app.goo.gl/yP95pQ1J8uT2gT4c6" target="_blank" class="vc-btn vc-btn--outline" style="display:inline-flex; align-items:center; gap:0.25rem;">
+            <a href="{{ $mapsUrl }}" target="_blank" class="vc-btn vc-btn--outline" style="display:inline-flex; align-items:center; gap:0.25rem;">
                 Open in Google Maps App ↗
             </a>
         </div>

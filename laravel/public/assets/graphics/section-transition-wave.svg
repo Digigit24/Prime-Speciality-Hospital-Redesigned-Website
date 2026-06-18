@@ -1,0 +1,15 @@
+<svg width="1600" height="260" viewBox="0 0 1600 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fill" x1="800" y1="0" x2="800" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#EFF6FF" stop-opacity=".82"/>
+    </linearGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#2374F2" fill-opacity=".18"/>
+    </pattern>
+  </defs>
+  <path d="M0 143C205 93 338 184 542 132C756 78 884 181 1100 130C1305 81 1433 106 1600 61V260H0V143Z" fill="url(#fill)"/>
+  <path d="M0 143C205 93 338 184 542 132C756 78 884 181 1100 130C1305 81 1433 106 1600 61" stroke="#93C5FD" stroke-opacity=".24" stroke-width="2"/>
+  <path d="M0 176C213 126 349 205 557 163C771 120 913 211 1126 163C1321 119 1454 137 1600 104" stroke="#6EE7B7" stroke-opacity=".18" stroke-width="1.5"/>
+  <rect x="1310" y="78" width="250" height="140" fill="url(#dots)" opacity=".58"/>
+</svg>

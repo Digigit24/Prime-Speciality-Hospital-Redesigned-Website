@@ -54,9 +54,20 @@
             </form>
             
             <!-- Urgent guidance warning block -->
-            <div style="margin-top: var(--space-2); padding: var(--space-2); border-radius: var(--radius-sm); border: 1px solid var(--red-200); background: var(--red-50); font-size: var(--text-caption); color: var(--red-700); line-height: 1.4;">
-                <strong>Urgent Medical Need?</strong><br>
-                Please call emergency services or visit the nearest ER. Do not wait for online responses.
+            <div style="margin-top: var(--space-4); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--red-200); background: linear-gradient(135deg, var(--red-50) 0%, #fff 100%); display: flex; gap: var(--space-3); align-items: start;">
+                <div style="width: 2.25rem; height: 2.25rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(239, 68, 68, 0.1); color: rgb(220, 38, 38); border-radius: 50%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.15rem; height: 1.15rem;">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <div style="line-height: 1.45;">
+                    <strong style="display: block; font-size: var(--text-body-sm); color: var(--red-800); font-weight: 800; font-family: var(--font-display);">Urgent Medical Need?</strong>
+                    <span style="display: block; font-size: var(--text-caption); color: var(--red-700); font-weight: 500; margin-top: 0.15rem;">
+                        Please call emergency services or visit the nearest ER immediately. Do not wait for online form responses.
+                    </span>
+                </div>
             </div>
         </div>
     </div>
