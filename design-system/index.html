@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VitaCore Clinical design-system specimen">
+  <title>VitaCore Clinical — Design System</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
+  <style>
+    .spec-header { position: sticky; top: 0; z-index: 10; background: rgb(255 255 255 / 88%); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(16px); }
+    .spec-block { padding-block: var(--space-20); border-bottom: 1px solid var(--color-border); }
+    .spec-heading { margin-bottom: var(--space-10); }
+    .spec-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .spec-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .spec-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .swatch { overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-xs); }
+    .swatch__color { height: 6rem; }
+    .swatch__meta { display: flex; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; font-size: .75rem; }
+    .type-row { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-6); align-items: baseline; padding-block: var(--space-4); border-bottom: 1px solid var(--color-border); }
+    .type-label { color: var(--color-text-subtle); font: 500 .75rem/1.4 var(--font-mono); }
+    .demo-display { font: 800 var(--text-display-xl)/1.02 var(--font-display); letter-spacing: -.045em; }
+    .demo-h1 { font: 800 var(--text-h1)/1.08 var(--font-display); letter-spacing: -.035em; }
+    .demo-h2 { font: 800 var(--text-h2)/1.12 var(--font-display); letter-spacing: -.03em; }
+    .surface { padding: var(--space-8); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); }
+    .space-row { display: flex; align-items: center; gap: var(--space-4); }
+    .space-bar { height: 1rem; background: var(--blue-500); border-radius: 999px; }
+    .token-code { padding: .2rem .45rem; background: var(--gray-100); border-radius: .35rem; font: .75rem var(--font-mono); }
+    .spec-footer { padding-block: var(--space-12); color: var(--color-text-muted); }
+    @media (max-width: 900px) { .spec-grid-4, .spec-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 650px) {
+      .spec-grid-4, .spec-grid-3, .spec-grid-2 { grid-template-columns: 1fr; }
+      .type-row { grid-template-columns: 1fr; gap: .5rem; }
+      .spec-header .vc-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="spec-header">
+    <div class="vc-container vc-nav">
+      <a class="vc-brand" href="#top"><span class="vc-brand__mark">+</span><span>VitaCore <span style="color:var(--color-care)">Clinical</span></span></a>
+      <nav class="vc-nav__links" aria-label="Design system sections">
+        <a class="vc-nav__link" href="#foundations">Foundations</a>
+        <a class="vc-nav__link" href="#components">Components</a>
+        <a class="vc-nav__link" href="#patterns">Patterns</a>
+      </nav>
+      <a class="vc-btn vc-btn--primary vc-btn--sm" href="brand-system.md">Read guidelines <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="vc-hero">
+      <div class="vc-container vc-hero__grid">
+        <div class="vc-stack" style="gap:1.5rem">
+          <span class="vc-badge">Clinical design system v1.0</span>
+          <h1 class="vc-hero__title">Care made <span class="vc-gradient-text">clear.</span></h1>
+          <p class="vc-lede">A production-ready visual language for trustworthy, modern healthcare experiences—calm enough for patients and precise enough for clinicians.</p>
+          <div class="vc-cluster">
+            <a class="vc-btn vc-btn--primary vc-btn--lg" href="#components">Explore components <span aria-hidden="true">→</span></a>
+            <a class="vc-btn vc-btn--outline vc-btn--lg" href="tokens.json">View tokens</a>
+          </div>
+        </div>
+        <div class="vc-hero__visual" aria-hidden="true"><div class="vc-orbit"></div></div>
+      </div>
+    </section>
+
+    <section class="spec-block" id="foundations">
+      <div class="vc-container">
+        <div class="spec-heading vc-stack">
+          <span class="vc-eyebrow">01 · Foundations</span>
+          <h2 class="vc-title">Color creates clinical confidence</h2>
+          <p class="vc-lede">Cobalt is reserved for action and authority. Green communicates care, health, and positive outcomes. Neutral ink keeps information legible and serious.</p>
+        </div>
+        <div class="vc-grid spec-grid-4">
+          <div class="swatch"><div class="swatch__color" style="background:#075ee6"></div><div class="swatch__meta"><strong>Action</strong><code>#075EE6</code></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#079455"></div><div class="swatch__meta"><strong>Care</strong><code>#079455</code></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0b1736"></div><div class="swatch__meta"><strong>Clinical ink</strong><code>#0B1736</code></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#eff6ff"></div><div class="swatch__meta"><strong>Atmosphere</strong><code>#EFF6FF</code></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spec-block">
+      <div class="vc-container">
+        <div class="spec-heading vc-stack">
+          <span class="vc-eyebrow">Typography</span>
+          <h2 class="vc-title">Direct, human, highly legible</h2>
+        </div>
+        <div class="type-row"><span class="type-label">Display XL · Manrope 800</span><span class="demo-display">Better health, clearly.</span></div>
+        <div class="type-row"><span class="type-label">H1 · Manrope 800</span><span class="demo-h1">Expert care without uncertainty.</span></div>
+        <div class="type-row"><span class="type-label">H2 · Manrope 800</span><span class="demo-h2">A calmer path to recovery.</span></div>
+        <div class="type-row"><span class="type-label">Body L · Inter 400</span><span style="max-width:65ch;font-size:1.125rem;color:var(--color-text-muted)">Patients need information they can understand quickly. Keep sentences direct, paragraphs narrow, and technical language purposeful.</span></div>
+      </div>
+    </section>
+
+    <section class="spec-block" id="components">
+      <div class="vc-container">
+        <div class="spec-heading vc-stack">
+          <span class="vc-eyebrow">02 · Components</span>
+          <h2 class="vc-title">Controls with unambiguous hierarchy</h2>
+        </div>
+        <div class="surface vc-stack" style="gap:2rem">
+          <div class="vc-cluster">
+            <button class="vc-btn vc-btn--primary">Book appointment <span>→</span></button>
+            <button class="vc-btn vc-btn--secondary">Find a specialist</button>
+            <button class="vc-btn vc-btn--outline">Explore services</button>
+            <button class="vc-btn vc-btn--ghost">Learn more</button>
+            <button class="vc-btn vc-btn--text">Text action →</button>
+            <button class="vc-btn vc-btn--primary" disabled>Unavailable</button>
+          </div>
+          <div class="vc-grid spec-grid-3">
+            <label class="vc-field"><span class="vc-label">Patient name</span><input class="vc-input" placeholder="Enter full name"><span class="vc-hint">As shown on your ID</span></label>
+            <label class="vc-field"><span class="vc-label">Department</span><select class="vc-select"><option>Select department</option><option>General surgery</option><option>Gastroenterology</option></select></label>
+            <label class="vc-field"><span class="vc-label">Phone number</span><input class="vc-input" aria-invalid="true" value="123"><span class="vc-hint" style="color:var(--red-700)">Enter a valid phone number</span></label>
+          </div>
+        </div>
+
+        <div class="vc-grid spec-grid-3" style="margin-top:2rem">
+          <article class="vc-card vc-card--interactive"><span class="vc-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></span><h3>Specialist consultation</h3><p>Clear summaries, visible next steps, and direct routes to trusted clinical teams.</p></article>
+          <article class="vc-card vc-card--interactive"><span class="vc-icon vc-icon--care"><svg viewBox="0 0 24 24"><path d="M20 8c0 6-8 11-8 11S4 14 4 8a4 4 0 0 1 7-2.6A4 4 0 0 1 20 8Z"/></svg></span><h3>Guided recovery</h3><p>Supportive green marks positive outcomes without competing with primary actions.</p></article>
+          <article class="vc-card"><div class="vc-stat"><span class="vc-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg></span><div><div class="vc-stat__value">98%</div><div class="vc-stat__label">patient satisfaction</div></div></div><p style="margin-top:1.5rem">Use one meaningful metric per tile. Always state the source and date in production.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="spec-block">
+      <div class="vc-container">
+        <div class="spec-heading vc-stack"><span class="vc-eyebrow">Feedback</span><h2 class="vc-title">Status should be calm and specific</h2></div>
+        <div class="vc-grid spec-grid-2">
+          <div class="vc-alert vc-alert--info"><strong>Appointment details updated.</strong><br>Review the time before confirming.</div>
+          <div class="vc-alert vc-alert--success"><strong>Appointment confirmed.</strong><br>A confirmation was sent to your phone.</div>
+          <div class="vc-alert vc-alert--warning"><strong>Limited availability.</strong><br>Only two appointments remain this week.</div>
+          <div class="vc-alert vc-alert--error"><strong>We could not submit the form.</strong><br>Check the highlighted fields and try again.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spec-block" id="patterns">
+      <div class="vc-container">
+        <div class="spec-heading vc-stack"><span class="vc-eyebrow">03 · Patterns</span><h2 class="vc-title">Appointment conversion pattern</h2><p class="vc-lede">Pair reassurance and contact alternatives with a short form. Do not hide urgent-care guidance inside appointment flows.</p></div>
+        <div class="surface vc-grid spec-grid-2" style="background:linear-gradient(120deg,#eff6ff,#fff 55%,#ecfdf5)">
+          <div class="vc-stack" style="justify-content:center;gap:1.5rem">
+            <h3 class="demo-h2" style="margin:0">Book with confidence.</h3>
+            <p class="vc-lede">Choose a department and preferred date. A care coordinator will confirm your appointment.</p>
+            <div class="vc-stack">
+              <div class="vc-cluster"><span class="vc-icon vc-icon--care">✓</span><strong>Secure patient details</strong></div>
+              <div class="vc-cluster"><span class="vc-icon">24</span><strong>Response within 24 hours</strong></div>
+            </div>
+          </div>
+          <form class="vc-card vc-stack">
+            <div class="vc-grid spec-grid-2">
+              <label class="vc-field"><span class="vc-label">Your name</span><input class="vc-input" placeholder="Full name"></label>
+              <label class="vc-field"><span class="vc-label">Phone number</span><input class="vc-input" placeholder="+1 555 000 0000"></label>
+            </div>
+            <label class="vc-field"><span class="vc-label">Department</span><select class="vc-select"><option>Choose a department</option></select></label>
+            <label class="vc-field"><span class="vc-label">Message</span><textarea class="vc-textarea" placeholder="How can we help?"></textarea></label>
+            <button class="vc-btn vc-btn--primary" type="button">Request appointment <span>→</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="spec-footer"><div class="vc-container vc-cluster" style="justify-content:space-between"><span>VitaCore Clinical Design System · v1.0</span><span>WCAG 2.2 AA target</span></div></footer>
+</body>
+</html>

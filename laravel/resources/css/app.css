@@ -1,0 +1,94 @@
+@import './tokens.css';
+@import './components.css';
+@import 'tailwindcss';
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Service body style overrides for rendering raw HTML from the database */
+.vc-service-body h1, .vc-service-body h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    color: var(--color-text);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    line-height: 1.2;
+}
+
+.vc-service-body h3, .vc-service-body h4 {
+    font-family: var(--font-display);
+    font-size: var(--text-h4);
+    color: var(--color-text);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+    font-weight: 700;
+}
+
+.vc-service-body h5, .vc-service-body h6 {
+    font-family: var(--font-display);
+    font-size: var(--text-h5);
+    color: var(--color-text);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+    font-weight: 700;
+}
+
+.vc-service-body p {
+    color: var(--color-text-muted);
+    font-size: var(--text-body-md);
+    line-height: 1.65;
+    margin-bottom: var(--space-4);
+}
+
+.vc-service-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.vc-service-body ul li {
+    position: relative;
+    padding-left: var(--space-6);
+    color: var(--color-text-muted);
+    font-size: var(--text-body-md);
+    line-height: 1.5;
+}
+
+.vc-service-body ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-care);
+    font-weight: 800;
+}
+
+.vc-service-body img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-block: var(--space-6);
+    max-width: 100%;
+    height: auto;
+}
+
+.vc-service-body strong, .vc-service-body b {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
