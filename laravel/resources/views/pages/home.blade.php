@@ -152,7 +152,7 @@
 </section>
 
 <!-- About Doctor / Hospital Section -->
-<section class="vc-section" style="padding-block: var(--space-16);">
+<section class="vc-section vc-home-section-bg vc-home-section-bg--about" style="padding-block: var(--space-16);">
     <div class="vc-container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-12); align-items: center;">
         <div style="position: relative;" class="vc-reveal-left">
             <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--color-border-strong); box-shadow: var(--shadow-md);">
@@ -313,15 +313,15 @@
 </section>
 
 <!-- Timeline / Patient Journey -->
-<section class="vc-section vc-scroll-reveal" style="padding-block: var(--space-16);">
-    <div class="vc-container">
+<section class="vc-section vc-home-section-bg vc-home-section-bg--journey" style="padding-block: var(--space-16);">
+    <div class="vc-container vc-journey-container">
         <div class="vc-stack" style="align-items: center; text-align: center; margin-bottom: var(--space-12);">
             <!-- Eyebrow removed to avoid repetition -->
             <h2 class="vc-title">Your Journey to <span style="color: var(--color-care);">Better Health</span></h2>
             <p class="vc-lede">We simplify consultation scheduling, diagnostics scans, and daycare surgeries.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); position: relative;">
+        <div class="vc-journey-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); position: relative;">
             <div class="desktop-only vc-reveal-line" style="position: absolute; top: 2.25rem; left: 10%; right: 10%; height: 2px; border-top: 2px dashed var(--color-border-strong); z-index: 1;"></div>
             
             <div class="vc-stack vc-reveal-left" style="align-items: center; text-align: center; gap: var(--space-4); position: relative; z-index: 2;">
@@ -353,7 +353,7 @@
 
 @if(!empty($reviews))
 <!-- Google Reviews Section -->
-<section class="vc-section vc-scroll-reveal" style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding-block: var(--space-20);">
+<section class="vc-section vc-scroll-reveal vc-home-section-bg vc-home-section-bg--testimonials" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding-block: var(--space-20);">
     <div class="vc-container">
         <div class="vc-stack" style="align-items: center; text-align: center; margin-bottom: var(--space-12);">
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid var(--blue-200); padding: 0.35rem 0.75rem; border-radius: var(--radius-round); width: fit-content; margin-bottom: 0.5rem; box-shadow: var(--shadow-xs);">
@@ -562,9 +562,9 @@
 </section>
 
 <!-- Booking form section -->
-<section class="vc-section" id="booking-section" style="padding-block: var(--space-16);">
+<section class="vc-section vc-home-section-bg vc-home-section-bg--booking" id="booking-section" style="padding-block: var(--space-16);">
     <div class="vc-container">
-        <div class="vc-grid" style="grid-template-columns: 0.95fr 1.05fr; gap: var(--space-12); background: linear-gradient(135deg, var(--blue-50) 0%, #fff 55%, var(--green-50) 100%); padding: var(--space-12); border: 1px solid var(--color-border-strong); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
+        <div class="vc-grid vc-home-booking-surface" style="grid-template-columns: 0.95fr 1.05fr; gap: var(--space-12); padding: var(--space-12); border: 1px solid var(--color-border-strong); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
             <div class="vc-stack vc-reveal-left" style="justify-content: center; gap: 1.5rem;">
                 <h2 class="vc-title" style="font-size: var(--text-display-md); line-height: 1.1; margin:0;">
                     Book Your Appointment <span style="color: var(--color-action);">Today</span>
@@ -656,6 +656,84 @@
 </section>
 
 <style>
+    .vc-home-section-bg {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background-color: #f8fbff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .vc-home-section-bg > .vc-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .vc-home-section-bg--about {
+        background-image: none;
+        background-color: #f8fbff;
+    }
+
+    .vc-home-section-bg--about::before {
+        content: "";
+        position: absolute;
+        inset: -10% -3%;
+        z-index: 0;
+        pointer-events: none;
+        background:
+            linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
+            url('{{ asset('assets/backgrounds/desktop/about-hospital-bg.png') }}') center / cover no-repeat;
+        transform: translate3d(0, -3.5%, 0) scale(1.04);
+        transform-origin: center;
+        will-change: transform;
+    }
+
+    @keyframes vc-about-background-parallax {
+        from {
+            transform: translate3d(0, -5%, 0) scale(1.04);
+        }
+        to {
+            transform: translate3d(0, 5%, 0) scale(1.04);
+        }
+    }
+
+    .vc-home-section-bg--journey {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22)),
+            url('{{ asset('assets/backgrounds/desktop/patient-journey-bg.png') }}');
+        background-position: center 58%;
+    }
+
+    .vc-journey-container {
+        width: min(calc(100% - 2 * var(--gutter)), var(--container-wide));
+    }
+
+    .vc-journey-grid > .vc-stack,
+    .vc-journey-grid > .vc-reveal-line {
+        opacity: 1;
+    }
+
+    .vc-home-section-bg--testimonials {
+        background-image: url('{{ asset('assets/backgrounds/desktop/testimonials-bg.png') }}');
+        background-position: center 62%;
+    }
+
+    .vc-home-section-bg--booking {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)),
+            url('{{ asset('assets/backgrounds/desktop/appointment-cta-bg.png') }}');
+        background-position: center;
+    }
+
+    .vc-home-booking-surface {
+        background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.64)),
+            url('{{ asset('assets/backgrounds/desktop/appointment-cta-bg.png') }}') center / cover no-repeat;
+        box-shadow: 0 24px 60px rgba(36, 99, 235, 0.12);
+    }
+
     .vc-hero::after {
         display: none;
     }
@@ -827,6 +905,46 @@
     }
     
     @media (max-width: 900px) {
+        .vc-home-section-bg--about::before {
+            inset: -7% -10%;
+            background-position: 42% center;
+        }
+
+        .vc-home-section-bg--journey {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32)),
+                url('{{ asset('assets/backgrounds/mobile/patient-journey-bg-vertical.png') }}');
+            background-position: center;
+        }
+
+        .vc-journey-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            column-gap: clamp(2rem, 8vw, 5rem) !important;
+            row-gap: var(--space-10) !important;
+        }
+
+        .vc-journey-grid > .desktop-only {
+            display: none !important;
+        }
+
+        .vc-home-section-bg--testimonials {
+            background-image: url('{{ asset('assets/backgrounds/mobile/testimonials-bg-vertical.png') }}');
+            background-position: center;
+        }
+
+        .vc-home-section-bg--booking {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url('{{ asset('assets/backgrounds/mobile/appointment-cta-bg-vertical.png') }}');
+            background-position: center;
+        }
+
+        .vc-home-booking-surface {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.7)),
+                url('{{ asset('assets/backgrounds/mobile/appointment-cta-bg-vertical.png') }}') center / cover no-repeat;
+        }
+
         .vc-hero::before {
             background-image: url('{{ asset('assets/graphics/mobile-edge-pattern.svg') }}');
             background-position: right center;
@@ -888,6 +1006,23 @@
     }
 
     @media (max-width: 600px) {
+        .vc-home-section-bg--journey {
+            background-position: center top;
+        }
+
+        .vc-journey-container {
+            width: min(calc(100% - 2rem), var(--container-wide));
+        }
+
+        .vc-journey-grid {
+            grid-template-columns: 1fr !important;
+            gap: var(--space-8) !important;
+        }
+
+        .vc-journey-grid > .vc-stack {
+            gap: var(--space-3) !important;
+        }
+
         .vc-home-hero-art {
             min-height: 27rem;
         }
@@ -932,6 +1067,32 @@
     @media (prefers-reduced-motion: reduce) {
         .vc-home-hero-art__aura {
             animation: none;
+        }
+    }
+
+    @supports (animation-timeline: view()) {
+        .vc-home-section-bg--about::before {
+            animation: vc-about-background-parallax linear both;
+            animation-timeline: view();
+            animation-range: entry 0% exit 100%;
+        }
+
+        .vc-home-section-bg--journey,
+        .vc-home-section-bg--journey .vc-reveal-left,
+        .vc-home-section-bg--journey .vc-reveal-right,
+        .vc-home-section-bg--journey .vc-reveal-line {
+            animation: none;
+            opacity: 1;
+            transform: none;
+            clip-path: none;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .vc-home-section-bg--about::before {
+            animation: none;
+            transform: scale(1.04);
+            will-change: auto;
         }
     }
 </style>

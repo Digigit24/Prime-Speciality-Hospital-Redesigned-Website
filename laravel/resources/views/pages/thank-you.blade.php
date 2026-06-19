@@ -1,43 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Thank You - Appointment Request Received | Prime Speciality Hospital')
+@section('title', 'Thank You - Prime Speciality Hospital')
+@section('meta_description', 'Your request has been received by Prime Speciality Hospital.')
 
 @section('content')
-<section class="vc-section" style="min-height: 70vh; display: grid; align-items: center;">
-    <div class="vc-container" style="max-width: 38rem; text-align: center;">
-        <div class="vc-stack" style="gap: var(--space-6); align-items: center;">
-            <!-- Success Icon -->
-            <div class="vc-icon vc-icon--care" style="width: 5rem; height: 5rem; font-size: 2.25rem; margin-inline: auto;">
-                ✓
-            </div>
-            
-            <div>
-                <h1 style="font-family: var(--font-display); font-size: var(--text-h1); font-weight: 800; color: var(--color-text); margin: 0; line-height: 1.15;">
-                    Request Received Successfully!
-                </h1>
-                <p class="vc-lede" style="margin-top: var(--space-3); font-size: var(--text-body-lg); margin-inline: auto;">
-                    Thank you for reaching out to Prime Speciality Hospital.
-                </p>
-            </div>
-
-            <!-- Confirmation message details -->
-            <div class="vc-card" style="background: var(--color-surface); border-color: var(--color-border-strong); text-align: left; padding: var(--space-6); width: 100%;">
-                <h3 style="margin-top: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700; color: var(--color-text);">Next Steps</h3>
-                <p style="font-size: var(--text-body-sm); color: var(--color-text-muted); line-height: 1.6; margin: 0;">
-                    1. A medical coordinator is reviewing your consultation parameters.<br>
-                    2. We will contact you at the phone number provided within <strong>24 hours</strong> to confirm a suitable appointment time slot.<br>
-                    3. For emergency inquiries or immediate bookings, please dial the helpline directly.
-                </p>
-            </div>
-
-            <!-- Call Info -->
-            <div class="vc-stack" style="width: 100%; gap: var(--space-3);">
-                <a href="tel:+917447441426" class="vc-btn vc-btn--primary" style="width: 100%;">
-                    Call Helpline: +91 74474 41426
-                </a>
-                <a href="{{ route('home') }}" class="vc-btn vc-btn--outline" style="width: 100%;">
-                    Return to Homepage
-                </a>
+<section class="vc-section vc-page-atmosphere" style="min-height:72vh;display:grid;align-items:center">
+    <div class="vc-container" style="max-width:48rem;text-align:center">
+        <div class="vc-card vc-stack vc-fade-in-scale" style="align-items:center;gap:var(--space-6);padding:clamp(2rem,7vw,5rem);border-color:var(--color-border-strong);background:rgb(255 255 255 / 92%);box-shadow:var(--shadow-xl)">
+            <img src="{{ asset('assets/icons/icon-shield.svg') }}" alt="" style="width:5rem;height:5rem">
+            <span class="vc-eyebrow">Request Received</span>
+            <h1 style="margin:0;font:800 var(--text-h1)/1.1 var(--font-display)">Thank you. Our team will contact you shortly.</h1>
+            <p class="vc-lede">Keep your phone available for appointment confirmation. For urgent concerns, call the hospital directly.</p>
+            <div class="vc-cluster" style="justify-content:center">
+                <a href="tel:+917447441426" class="vc-btn vc-btn--primary">Call Hospital</a>
+                <a href="{{ route('home') }}" class="vc-btn vc-btn--outline">Return Home</a>
             </div>
         </div>
     </div>

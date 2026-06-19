@@ -1,0 +1,27 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="doctorCrop">
+      <circle cx="450" cy="450" r="252"/>
+    </clipPath>
+    <radialGradient id="portraitEdge" cx="0" cy="0" r="1" gradientTransform="translate(450 418) rotate(90) scale(302)">
+      <stop offset=".82" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#DBEAFE" stop-opacity=".18"/>
+    </radialGradient>
+    <filter id="portraitShadow" x="130" y="130" width="640" height="660" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#075EE6" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <image href="hero-blob-frame.svg" x="0" y="0" width="900" height="900"/>
+
+  <g filter="url(#portraitShadow)">
+    <circle cx="450" cy="450" r="264" fill="#FFFFFF" fill-opacity=".86"/>
+    <image href="../../drpankajbhalerao.jpeg"
+           x="190" y="190" width="520" height="520"
+           preserveAspectRatio="xMidYMid slice"
+           clip-path="url(#doctorCrop)"/>
+    <circle cx="450" cy="450" r="252" fill="url(#portraitEdge)"/>
+    <circle cx="450" cy="450" r="258" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="8"/>
+    <circle cx="450" cy="450" r="263" stroke="#60A5FA" stroke-opacity=".34" stroke-width="2"/>
+  </g>
+</svg>

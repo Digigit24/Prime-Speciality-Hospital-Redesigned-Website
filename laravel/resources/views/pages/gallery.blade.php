@@ -1,131 +1,48 @@
 @extends('layouts.app')
 
 @section('title', 'Hospital Gallery - Prime Speciality Hospital Moshi Pune')
-@section('meta_description', 'View images of Prime Speciality Hospital in Moshi, Pune. Explore our advanced operation theatres, recovery rooms, and clean environment.')
+@section('meta_description', 'Explore Prime Speciality Hospital consultation rooms, operation theatre, recovery wards, ICU, reception, diagnostics, and pharmacy.')
 
 @section('content')
-<!-- Header Banner -->
-<section style="background: var(--color-surface); padding-block: var(--space-4); border-bottom: 1px solid var(--color-border);">
-    <div class="vc-container">
-        <nav style="display: flex; gap: var(--space-2); font-size: var(--text-caption); color: var(--color-text-subtle);">
-            <a href="{{ route('home') }}" style="text-decoration: none;">Home</a>
-            <span>/</span>
-            <span style="color: var(--color-text); font-weight: 600;">Gallery</span>
-        </nav>
-    </div>
-</section>
+<div class="vc-breadcrumbs">
+    <div class="vc-container"><nav><a href="{{ route('home') }}">Home</a><span>/</span><strong>Gallery</strong></nav></div>
+</div>
 
-<!-- Gallery Section -->
-<section class="vc-section vc-scroll-reveal">
+<section class="vc-section vc-page-atmosphere">
     <div class="vc-container">
-        <div class="vc-stack" style="align-items: center; text-align: center; margin-bottom: var(--space-12);">
+        <div class="vc-section-heading">
             <span class="vc-eyebrow">Our Facility</span>
-            <h1 style="font-family: var(--font-display); font-size: var(--text-h1); font-weight: 800; color: var(--color-text); margin: 0; line-height: 1.1;">
-                Prime Speciality Hospital Gallery
-            </h1>
-            <p class="vc-lede">Explore our modern operation theatres, patient wards, consulting chambers, and healthcare setup in Moshi.</p>
+            <h1 style="margin:0;font:800 var(--text-h1)/1.06 var(--font-display);letter-spacing:-.04em">A closer look at Prime Speciality Hospital.</h1>
+            <p class="vc-lede">Consulting, surgery, monitoring, recovery, diagnostics, and pharmacy services are coordinated within our Moshi facility.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
-            <!-- Image 1 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.36-PM-2.jpeg" alt="Consulting Room" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=Consulting+Room'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Consulting Chamber</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">Clean and private patient consultation desk.</p>
-                </div>
-            </div>
+        @php
+            $gallery = [
+                ['WhatsApp-Image-2023-12-15-at-1.16.36-PM-2.jpeg','Consulting Chamber','A private environment for examination and treatment planning.'],
+                ['WhatsApp-Image-2023-12-15-at-1.16.37-PM.jpeg','Operation Theatre','A surgical setup supporting high-definition laparoscopy and monitored procedures.'],
+                ['WhatsApp-Image-2023-12-15-at-1.16.38-PM-1.jpeg','Patient Recovery Ward','Clean, monitored spaces for post-operative recovery and family support.'],
+                ['WhatsApp-Image-2023-12-15-at-1.16.38-PM.jpeg','Reception Lobby','A clear arrival and registration point for patients and attendants.'],
+                ['WhatsApp-Image-2023-12-15-at-1.16.36-PM-1.jpeg','Intensive Care Unit','Monitoring and critical-care support for patients who require closer observation.'],
+                ['WhatsApp-Image-2023-12-15-at-1.16.37-PM-1.jpeg','Diagnostics and Pharmacy','Integrated support for investigations, reports, prescriptions, and medicines.'],
+            ];
+        @endphp
 
-            <!-- Image 2 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.37-PM.jpeg" alt="Operation Theatre" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=Operation+Theatre'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Operation Theatre (OT)</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">Equipped with high-precision laparoscopic imaging.</p>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.38-PM-1.jpeg" alt="In-patient Recovery Wards" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=Recovery+Wards'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Patient Recovery Ward</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">Spacious, sanitized in-patient recovery environment.</p>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.38-PM.jpeg" alt="Reception Lobby" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=Reception+Lobby'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Reception Lobby</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">A clean, welcoming lobby desk for registrations.</p>
-                </div>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.36-PM-1.jpeg" alt="ICU Setup" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=ICU+Setup'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Intensive Care Unit (ICU)</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">Equipped for critical support and post-op monitoring.</p>
-                </div>
-            </div>
-
-            <!-- Image 6 -->
-            <div class="vc-card vc-fade-in-scale" style="padding: 0; overflow: hidden; border-color: var(--color-border-strong); background: #fff;">
-                <div style="aspect-ratio: 4/3; background: #eaeaea; overflow: hidden; position: relative;">
-                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-15-at-1.16.37-PM-1.jpeg" alt="Diagnostics Desk" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/600x450?text=Diagnostics+Desk'">
-                </div>
-                <div style="padding: var(--space-4);">
-                    <h3 style="margin: 0; font-family: var(--font-display); font-size: var(--text-body-md); font-weight: 700;">Pathology & Pharmacy</h3>
-                    <p style="font-size: var(--text-caption); color: var(--color-text-muted); margin-top: 0.25rem;">Integrated service desk for diagnostics and medicines.</p>
-                </div>
-            </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6)" class="vc-gallery-grid">
+            @foreach($gallery as [$file,$title,$text])
+                <article class="vc-card vc-fade-in-scale" style="padding:0;overflow:hidden;background:rgb(255 255 255 / 92%);border-color:var(--color-border-strong);box-shadow:var(--shadow-md)">
+                    <img src="https://primespecialityhospital.in/wp-content/uploads/2023/12/{{ $file }}" alt="{{ $title }}" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover" onerror="this.src='{{ asset('assets/prime_hospital_facade.png') }}'">
+                    <div style="padding:var(--space-5,1.25rem)"><h2 style="margin:0 0 var(--space-2);font:700 var(--text-h5)/1.25 var(--font-display)">{{ $title }}</h2><p style="margin:0;color:var(--color-text-muted);font-size:var(--text-body-sm)">{{ $text }}</p></div>
+                </article>
+            @endforeach
         </div>
     </div>
 </section>
 
-<!-- Appointment CTA -->
-<section class="vc-section vc-scroll-reveal" style="background: var(--color-surface); border-top: 1px solid var(--color-border);">
-    <div class="vc-container" style="text-align: center;">
-        <div class="vc-stack" style="align-items: center; max-width: 36rem; margin-inline: auto; gap: var(--space-4);">
-            <h2 class="vc-title">Schedule a Visit Today</h2>
-            <p class="vc-lede">Request an appointment online or contact our reception desk to visit our facility in Moshi.</p>
-            <a class="vc-btn vc-btn--primary" href="{{ url('/appointment') }}">Book Appointment</a>
-        </div>
-    </div>
-</section>
+<x-google-reviews :reviews="$reviews" title="Care Beyond the Facility" description="The environment matters, but patient communication, treatment quality, and recovery support matter more." />
+<x-page-cta page-source="gallery_page_cta" title="Schedule a Hospital" accent="Visit" description="Request a consultation or speak with our reception team before visiting the facility." />
 
 <style>
-    @media (max-width: 900px) {
-        .vc-section .vc-container {
-            grid-template-columns: 1fr !important;
-        }
-        .vc-grid {
-            grid-template-columns: 1fr !important;
-        }
-        footer .vc-container {
-            grid-template-columns: repeat(2, 1fr) !important;
-        }
-        section .vc-container div[style*="grid-template-columns: repeat(3"] {
-            grid-template-columns: repeat(2, 1fr) !important;
-        }
-    }
-    @media (max-width: 600px) {
-        section .vc-container div[style*="grid-template-columns: repeat(3"] {
-            grid-template-columns: 1fr !important;
-        }
-    }
+@media(max-width:900px){.vc-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){.vc-gallery-grid{grid-template-columns:1fr!important}}
 </style>
 @endsection
